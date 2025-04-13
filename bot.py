@@ -7,10 +7,13 @@ TOKEN = "8111395645:AAGc-_RSqzfBYQ4PAOxuizu5dnxZ4we6TQ0"
 REGISTER_LINK = "https://jalwa.win/#//#/register?invitationCode=43658102035"
 BOT_IMAGE_URL = "https://telegra.ph/file/fed49767152996377c237.jpg"
 
+# Sticker ID to send on /win and /w
+STICKER_ID = "CAACAgUAAxkBAAEEiN5lZVmmR-cIhNUp5PXz6zAo7P8W3gACpQMAAiVloFXoW5abHq9B4zQE"  # Replace with your own if needed
+
 # Format betting message
 def format_bet_message(period, bet):
     return (
-        f"🎯 𝐏ᴇʀɪᴏ𝐝 𝐍ᴜᴍ𝐛ᴇʀ: {period}\n\n"
+        f"🎯 𝐏ᴇʀɪᴏᴅ 𝐍ᴜᴍ𝐛ᴇʀ: {period}\n\n"
         f"🔹 𝐁ᴇ𝐭 𝐎ɴ: {bet}\n\n"
         f"🔗 𝐑ᴇɢɪsᴛᴇʀ 𝐍ᴏᴡ:\n{REGISTER_LINK}"
     )
@@ -49,7 +52,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Betting message sender
 async def send_bet(update: Update, context: ContextTypes.DEFAULT_TYPE, bet_text: str):
     if not context.args:
-        await update.message.reply_text("❌ Period number dena padega!\nExample: /big 123456")
+        await update.message.reply_text("❌ Period number dena padega!\nExample: /b 123456")
         return
 
     period = context.args[0]
@@ -63,20 +66,24 @@ async def send_bet(update: Update, context: ContextTypes.DEFAULT_TYPE, bet_text:
     await context.bot.send_message(chat_id=update.effective_chat.id, text=message)
 
 # Bet commands
-async def big(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def b(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await send_bet(update, context, "ʙɪɢ ✅")
 
-async def small(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def s(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await send_bet(update, context, "🔻 sᴍᴀʟʟ")
 
-async def red(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def r(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await send_bet(update, context, "ʀᴇᴅ 🟥")
 
-async def green(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def g(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await send_bet(update, context, "ɢʀᴇᴇɴ 🟩")
 
-async def violet(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def v(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await send_bet(update, context, "ᴠɪᴏʟᴇᴛ 🟪")
+
+# Win sticker command
+async def win(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_sticker(chat_id=update.effective_chat.id, sticker=STICKER_ID)
 
 # Start the bot
 if __name__ == '__main__':
@@ -87,6 +94,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("r", r))
     app.add_handler(CommandHandler("g", g))
     app.add_handler(CommandHandler("v", v))
+    app.add_handler(CommandHandler(["win", "w"], win))
 
     print("Bot is running...")
     app.run_polling()
