@@ -5,7 +5,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 # Bot token and register link
 TOKEN = "8111395645:AAGc-_RSqzfBYQ4PAOxuizu5dnxZ4we6TQ0"
 REGISTER_LINK = "https://jalwa.win/#//#/register?invitationCode=43658102035"
-BOT_IMAGE_URL = "https://telegra.ph/file/fed49767152996377c237.jpg"
+BOT_IMAGE_URL = "https://graph.org/file/96e6e471f3087501932ab-7f658a1bfa319c2425.jpg"
 
 # Sticker ID to send on /win and /w
 STICKER_ID = "CAACAgUAAxkBAAEEiN5lZVmmR-cIhNUp5PXz6zAo7P8W3gACpQMAAiVloFXoW5abHq9B4zQE"  # Replace with your own if needed
