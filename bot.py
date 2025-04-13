@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 # Bot token and register link
-TOKEN = "7642271614:AAHzW3eIcmwpDcXHJwzIjMQYT9y4heiQaiA"
+TOKEN = "8111395645:AAGc-_RSqzfBYQ4PAOxuizu5dnxZ4we6TQ0"
 REGISTER_LINK = "https://jalwa.win/#//#/register?invitationCode=43658102035"
 
 def format_bet_message(period, bet):
