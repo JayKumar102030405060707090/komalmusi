@@ -1,7 +1,7 @@
 {
   "name": "Telegram Bet Bot",
   "description": "A Telegram bot to send bet messages with /big, /small, etc.",
-  "repository": "https://github.com/YOUR_USERNAME/telegram-bet-bot",
+  "repository": "https://github.com/JayKumar102030405060707090/komalmusi",
   "keywords": ["telegram", "bot", "heroku"],
   "env": {
     "TOKEN": {
