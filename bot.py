@@ -2,13 +2,13 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.constants import ParseMode
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-# Bot token and register link
+# Bot token
 TOKEN = "8111395645:AAGc-_RSqzfBYQ4PAOxuizu5dnxZ4we6TQ0"
 REGISTER_LINK = "https://jalwa.win/#//#/register?invitationCode=43658102035"
 BOT_IMAGE_URL = "https://graph.org/file/96e6e471f3087501932ab-7f658a1bfa319c2425.jpg"
 
-# Sticker ID to send on /win and /w
-STICKER_ID = "CAACAgUAAxkBAAEEiN5lZVmmR-cIhNUp5PXz6zAo7P8W3gACpQMAAiVloFXoW5abHq9B4zQE"  # Replace with your own if needed
+# Sticker ID
+STICKER_ID = "CAACAgUAAxkBAAEEiN5lZVmmR-cIhNUp5PXz6zAo7P8W3gACpQMAAiVloFXoW5abHq9B4zQE"
 
 # Format betting message
 def format_bet_message(period, bet):
@@ -18,7 +18,7 @@ def format_bet_message(period, bet):
         f"🔗 𝐑ᴇɢɪsᴛᴇʀ 𝐍ᴏᴡ:\n{REGISTER_LINK}"
     )
 
-# /start command
+# Start command
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     full_name = f"{user.first_name or ''} {user.last_name or ''}".strip()
@@ -29,7 +29,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"✦ ɪ'ᴍ ʏᴏᴜʀ ᴘʀᴇᴅᴜᴄᴛɪᴏɴ ʙᴏᴛ !!\n\n"
         f"◆ ɪ'ᴍ ʀᴇᴀᴄᴛ ᴛᴏ ᴇᴠᴇʀʏ ᴍᴇssᴀɢᴇ ɪɴ ɢʀᴏᴜᴘs, ᴄʜᴀɴɴᴇʟs, ᴀɴᴅ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs ᴡɪᴛʜ ᴀ ʀᴀɴᴅᴏᴍ ᴇᴍᴏᴊɪ..!!\n\n"
         f"✦ 𝖶ɪᴛʜ sᴏᴍᴇ ғᴇᴀᴛᴜʀᴇs.\n\n"
-        f"✦ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ <a href='tg://user?id=7168729089'>ɴᴏᴛᴛʏ ʙᴀʙʏ</a>"
+        f"✦ 𝐏ᴏᴡᴇʀᴇᴅ 𝖯ʏ <a href='tg://user?id=7168729089'>ɴᴏᴛᴛʏ ʙᴀʙʏ</a>"
     )
 
     keyboard = [
