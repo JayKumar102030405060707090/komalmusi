@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, Con
 
 # Bot token
 TOKEN = "8111395645:AAF5FE1DHjr99t_BBZAyBlhXMSCxtabl8BY"
-REGISTER_LINK = "https://jalwa.win/#//#/register?invitationCode=43658102035"
+REGISTER_LINK = "https://www.jalwagames2.com/#/register?invitationCode=863361332615"
 BOT_IMAGE_URL = "https://graph.org/file/96e6e471f3087501932ab-7f658a1bfa319c2425.jpg"
 STICKER_ID = "CAACAgUAAxkBAAEEiN5lZVmmR-cIhNUp5PXz6zAo7P8W3gACpQMAAiVloFXoW5abHq9B4zQE"
 
